@@ -67,7 +67,7 @@ preguntaHecha()
 //la verdad no sabia como implementar todavia un metodo, pero como mas adelante el usuario va a poder elegir tambie el tipo de preguntas que quiera, por eso le agregue el parametro tipo
 //asi que el filter seria bueno para que busque solo preguntas de por ejemplo, deportes.
 
-const resultado = cuestionario.filter((el) => el.tipo.includes('Deportes'))
+const resultado = cuestionario.filter((el) => el.tipo == 'Deportes')
 console.log(resultado);
 
 
