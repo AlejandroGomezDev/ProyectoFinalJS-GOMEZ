@@ -57,7 +57,7 @@ function marcador(){
             cantidadCorrectas++;
         }
     }
-    alert(`Usted a contestado ${cantidadCorrectas} preguntas bien.`)
+    alert(`Usted ha contestado ${cantidadCorrectas} preguntas bien.`)
 }
 
 //llamado de la funcion.
