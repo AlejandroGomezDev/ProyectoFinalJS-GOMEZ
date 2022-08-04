@@ -2,7 +2,8 @@
 
 //creamos la class para las preguntas
 class Preguntas{
-    constructor (pregunta, opcion1, opcion2, opcion3, opcion4){
+    constructor (tipo, pregunta, opcion1, opcion2, opcion3, opcion4){
+        this.tipo = tipo
         this.pregunta = pregunta
         this.opcion1 = opcion1
         this.opcion2 = opcion2
@@ -14,13 +15,13 @@ class Preguntas{
 //array donde se almacenan las preguntas
 const cuestionario = []
 
-const pregunta1 = new Preguntas ("Quien pinto la ultima cena?", "Leonardo da Vinci", "Vincent van Gogh", "Salvador Dali", "Pablo Picasso")
+const pregunta1 = new Preguntas ("Arte","Quien pinto la ultima cena?", "Leonardo da Vinci", "Vincent van Gogh", "Salvador Dali", "Pablo Picasso")
 cuestionario.push(pregunta1)
-const pregunta2 = new Preguntas ("Quien es el maximo goleador historico en mundiales de futbol?", "Pele (Brasil)", "Miroslav Klose (Alemania)", "Ronaldo (Brasil)", "Just Fontaine (Francia)")
+const pregunta2 = new Preguntas ("Deportes","Quien es el maximo goleador historico en mundiales de futbol?", "Pele (Brasil)", "Miroslav Klose (Alemania)", "Ronaldo (Brasil)", "Just Fontaine (Francia)")
 cuestionario.push(pregunta2)
-const pregunta3 = new Preguntas ("Cual es la capital de Canada?", "Toronto", "Quebec", "Victoria", "Ottawa")
+const pregunta3 = new Preguntas ("Geografia","Cual es la capital de Canada?", "Toronto", "Quebec", "Victoria", "Ottawa")
 cuestionario.push(pregunta3)
-const pregunta4 = new Preguntas ("Quien es el hermano de Mario en la saga de videojuegos Super Mario Bross?", "Yoshi", "Toad", "Luiggi", "Bowser")
+const pregunta4 = new Preguntas ("Entretenimiento","Quien es el hermano de Mario en la saga de videojuegos Super Mario Bross?", "Yoshi", "Toad", "Luiggi", "Bowser")
 cuestionario.push(pregunta4)
 
 //funcion para que pregunten al usuario
@@ -63,6 +64,11 @@ function marcador(){
 preguntaHecha()
 
 
+//la verdad no sabia como implementar todavia un metodo, pero como mas adelante el usuario va a poder elegir tambie el tipo de preguntas que quiera, por eso le agregue el parametro tipo
+//asi que el filter seria bueno para que busque solo preguntas de por ejemplo, deportes.
+
+const resultado = cuestionario.filter((el) => el.tipo.includes('Deportes'))
+console.log(resultado);
 
 
 
